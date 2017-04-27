@@ -1,0 +1,14 @@
+    1  apt-get install git
+    2  exit
+    3  ://github.com/joneskamal/ITC-136
+    4  git
+    5  git clone https://github.com/joneskamal/ITC-136.git
+    6  ls -l
+    7  cd ITC-136
+    8  ls -ltra
+    9  cd .git
+   10  ls -la
+   11  cd ..
+   12  git config ..global user.email "joneskamal44@gmail.com"
+   13  git config ..global user.name"nic-joneskamal44"
+   14  history >> firstconfig.history
