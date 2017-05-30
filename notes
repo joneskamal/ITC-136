@@ -1,0 +1,254 @@
+~$ df -h
+$ echo $diskused: 
+To find out Environment Variables:~$ env | less( Show username for instance)
+~$ user/local/bin
+#!/bin/bash
+
+echo "this is the user/local/bin/itc136"
+
+ysedgo@ysedgo-Virtual-Machine:~$ ls -l /usr/local/bin/itc136
+-rw-r--r-- 1 root root 55 May 23 13:41 /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+
+ysedgo@ysedgo-Virtual-Machine:~$ echo SPATH
+SPATH
+ysedgo@ysedgo-Virtual-Machine:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+to add new file: ~$ sudo vim /usr/local/bin/itc136
+Then “shift and ;”
+then
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ itc136
+this is the user/local/bin/itc136
+
+ysedgo@ysedgo-Virtual-Machine:~$ echo $diskused: to find out the space used on disk
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           9275        5413        3170          12         692        3727
+Swap:          2917           5        2912
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh
+              total        used        free      shared  buff/cache   available
+Mem:           9.1G        5.3G        3.1G         13M        693M        3.6G
+Swap:          2.8G        5.9M        2.8G
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh | grep Mem | awk '{print $7}'
+3.6G
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh | grep Mem | awk '{print $6}'
+694M
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin/stats
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/stats : to make a command executable
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin/stats
+ snapshot of current system;
+
+Disk Used: 30%
+
+free memory: 4.1G
+
+connections;tcp        0      0 172.31.83.138:46384     a23-59-189-97.depl:http ESTABLISHED
+users; ysedgo   tty7         2017-05-23 12:53 (:0) 
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+#!/bin/bash
+
+diskused=$( df -h | grep "/dev/sda1" | awk '{print $5}' )
+
+memfree=$( free -mh | grep Mem: | awk '{print $7}' )
+
+connections=$( netstat | grep tcp )
+
+users=$( who|awk '{print $1} 
+echo " snapshot of current system;
+
+Disk Used: $diskused
+
+free memory: $memfree
+
+connections;$connections
+users; $users "
+
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim/usr/local/bin
+sudo: vim/usr/local/bin: command not found
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin
+bash: /usr/local/bin: Is a directory
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin/stats
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin/stats
+ snapshot of current system;
+
+Disk Used: 30%
+
+free memory: 3.9G
+~$ df -h
+$ echo $diskused: 
+To find out Environment Variables:~$ env | less( Show username for instance)
+~$ user/local/bin
+#!/bin/bash
+
+echo "this is the user/local/bin/itc136"
+
+ysedgo@ysedgo-Virtual-Machine:~$ ls -l /usr/local/bin/itc136
+-rw-r--r-- 1 root root 55 May 23 13:41 /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+
+ysedgo@ysedgo-Virtual-Machine:~$ echo SPATH
+SPATH
+ysedgo@ysedgo-Virtual-Machine:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+to add new file: ~$ sudo vim /usr/local/bin/itc136
+Then “shift and ;”
+then
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/itc136
+ysedgo@ysedgo-Virtual-Machine:~$ itc136
+this is the user/local/bin/itc136
+
+ysedgo@ysedgo-Virtual-Machine:~$ echo $diskused: to find out the space used on disk
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           9275        5413        3170          12         692        3727
+Swap:          2917           5        2912
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh
+              total        used        free      shared  buff/cache   available
+Mem:           9.1G        5.3G        3.1G         13M        693M        3.6G
+Swap:          2.8G        5.9M        2.8G
+
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh | grep Mem | awk '{print $7}'
+3.6G
+ysedgo@ysedgo-Virtual-Machine:~$ free -mh | grep Mem | awk '{print $6}'
+694M
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin/stats
+ysedgo@ysedgo-Virtual-Machine:~$ sudo chmod +x /usr/local/bin/stats : to make a command executable
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin/stats
+ snapshot of current system;
+
+Disk Used: 30%
+
+free memory: 4.1G
+
+connections;tcp        0      0 172.31.83.138:46384     a23-59-189-97.depl:http ESTABLISHED
+users; ysedgo   tty7         2017-05-23 12:53 (:0) 
+ysedgo@ysedgo-Virtual-Machine:~$ 
+
+#!/bin/bash
+
+diskused=$( df -h | grep "/dev/sda1" | awk '{print $5}' )
+
+memfree=$( free -mh | grep Mem: | awk '{print $7}' )
+
+connections=$( netstat | grep tcp )
+
+users=$( who|awk '{print $1} 
+echo " snapshot of current system;
+
+Disk Used: $diskused
+
+free memory: $memfree
+
+connections;$connections
+users; $users "
+
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim/usr/local/bin
+sudo: vim/usr/local/bin: command not found
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin
+bash: /usr/local/bin: Is a directory
+ysedgo@ysedgo-Virtual-Machine:~$ sudo vim /usr/local/bin/stats
+ysedgo@ysedgo-Virtual-Machine:~$ /usr/local/bin/stats
+ snapshot of current system;
+
+Disk Used: 30%
+
+free memory: 3.9G
+
+
+ysedgo@ysedgo-Virtual-Machine:~$ git clone https://github.com/joneskamal/ITC-136.git
+fatal: destination path 'ITC-136' already exists and is not an empty directory.
+ysedgo@ysedgo-Virtual-Machine:~$ cd ~/Desktop
+ysedgo@ysedgo-Virtual-Machine:~/Desktop$ git clone https://github.com/joneskamal/ITC-136.git
+Cloning into 'ITC-136'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+ysedgo@ysedgo-Virtual-Machine:~/Desktop$ ls -l
+total 12
+-rw-rw-r-- 1 ysedgo ysedgo  946 May 18 14:59 history.out 2
+drwxrwxr-x 3 ysedgo ysedgo 4096 May 30 14:40 ITC-136
+-rw-rw-r-- 1 ysedgo ysedgo  192 May 25 14:58 stats.desktop
+ysedgo@ysedgo-Virtual-Machine:~/Desktop$ cd ITC-136
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ cp /usr/local/bin/* .
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ ls -l
+total 20
+-rwxr-xr-x 1 ysedgo ysedgo 729 May 30 14:42 colors
+-rw-rw-r-- 1 ysedgo ysedgo 394 May 30 14:40 firstconfig.history
+-rwxr-xr-x 1 ysedgo ysedgo  55 May 30 14:42 itc136
+-rw-r--r-- 1 ysedgo ysedgo   1 May 30 14:42 itc-136
+-rwxr-xr-x 1 ysedgo ysedgo 339 May 30 14:42 stats
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ 
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ sudo su
+
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ysedgo@ysedgo-Virtual-Machine.(none)')
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ git config --global user.email "joneskamal44@gmail.com"
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ git config --global user.name "ysedgo"
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ git commit -m "adding stats script and desktop icon"
+[master 2584965] adding stats script and desktop icon
+ 4 files changed, 49 insertions(+)
+ create mode 100755 colors
+ create mode 100644 itc-136
+ create mode 100755 itc136
+ create mode 100755 stats
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': joneskamal44@gmail.com
+Password for 'https://joneskamal44@gmail.com@github.com': 
+Counting objects: 6, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.09 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/joneskamal/ITC-136.git
+   5c13067..2584965  master -> master
+ysedgo@ysedgo-Virtual-Machine:~/Desktop/ITC-136$ 
