@@ -1,0 +1,15 @@
+#!/bin/bash
+
+diskused=$( df -h | grep "/dev/sda1" | awk '{print $5}' )
+
+memfree=$( free -mh | grep Mem: | awk '{print $7}' )
+
+connections=$( netstat | grep tcp )
+
+users=$( who | awk '{print $1} ' )
+echo -en " snapshot of current system;
+
+\e[94mDisk Used: $diskused
+\e[94mfree memory:$memfree
+\e[97mconnections;$connections
+users; $users" 
