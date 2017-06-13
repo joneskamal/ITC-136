@@ -1,0 +1,26 @@
+    1  adduser
+    2  Nick
+    3  adduser Nick
+    4  adduser nick
+    5  ps aux | grep nick
+    6  kill -9 -1
+    7  export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+    8  export PROMPT_COMMAND="history -a
+    9  history
+   10  history
+   11  exit
+   12  history nick
+   13  sudo su
+   14  exit
+   15  exit
+   16  /home/student# export PROMPT_COMMAND="history -a
+   17  /home/user_name/.bash_history
+   18  /home/student/.bash_history
+   19  /usr/local/bin/.bash_history
+   20  history
+   21  grep -v "^#" $MYFILE >output-file
+   22  history >> output-file
+   23  ls
+   24  cd Desktop/
+   25  ls
+   26  history >> output-file
